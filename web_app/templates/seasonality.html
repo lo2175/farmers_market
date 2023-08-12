@@ -4,7 +4,22 @@
 {% block content %}
 
     <h1>Fruit & Vegetable Seasonality</h1>
+    import matplotlib.pyplot as plt
+import requests
+from PIL import Image
+from io import BytesIO
 
+# URL of the image
+image_url = "https://eadn-wc01-4177395.nxedge.io/wp-content/uploads/2020/05/New-York-scaled.jpg"
+
+# Fetch the image from the URL
+response = requests.get(image_url)
+img = Image.open(BytesIO(response.content))
+
+# Show the image using Matplotlib
+plt.imshow(img)
+plt.axis('off')
+plt.show()
     <p>to be added</p>
 
 {% endblock %}
