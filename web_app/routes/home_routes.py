@@ -1,5 +1,3 @@
-# this is the "web_app/routes/home_routes.py" file...
-
 from flask import Blueprint, request, render_template
 
 home_routes = Blueprint("home_routes", __name__)
@@ -7,7 +5,7 @@ home_routes = Blueprint("home_routes", __name__)
 @home_routes.route("/")
 @home_routes.route("/home")
 def index():
-    print("Farmer's Market Finder...")
+    print("Farmers Market Finder...")
     #return "Welcome Home"
     return render_template("home.html")
 

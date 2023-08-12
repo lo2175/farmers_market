@@ -3,5 +3,5 @@ pandas
 requests
 plotly
 flask # <--- ADD FOR WEB APP
-#gunicorn
+gunicorn
 pytest
